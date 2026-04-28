@@ -1,0 +1,35 @@
+name: CI Pipeline
+
+# Quand est-ce que ça se lance ?
+on:
+  push:
+    branches: [ "main" ]
+
+# Les tâches à faire
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Récupérer ton code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. Installer Node.js
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    # 3. Installer dépendances
+    - name: Install dependencies
+      run: |
+        cd backend
+        npm install
+
+    # 4. Tester l'application
+    - name: Run app
+      run: |
+        cd backend
+        node app.js &
+        sleep 5
