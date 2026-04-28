@@ -29,8 +29,10 @@ jobs:
         
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v2
+      with:
+        projectBaseDir: .
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}        
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}       
 
     # 4. Tester l'application
     - name: Run app
