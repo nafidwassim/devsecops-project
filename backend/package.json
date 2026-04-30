@@ -1,9 +1,28 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Secure backend",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.5",
+    "express": "^4.22.1",
+    "glob": "^11.1.0",
+    "minimatch": "^10.2.3",
+    "tar": "^7.5.11"
+  },
+  "overrides": {
+    "body-parser": "1.20.3",
+    "cookie": "0.7.2",
+    "path-to-regexp": "0.1.13",
+    "qs": "6.13.1",
+    "send": "0.19.1",
+    "serve-static": "1.16.2"
+  }
+=======
     "start": "node app.js",
     "test": "echo \"No tests yet\""
   },
@@ -13,5 +32,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
+>>>>>>> origin/main
 }
 
